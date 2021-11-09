@@ -8,43 +8,47 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //image
-    @IBOutlet weak var imageColor: UIImageView!
+    //colorView
+    @IBOutlet weak var colorView: UIView!
+    
     //labelValueColor
-    @IBOutlet weak var labelValueRed: UILabel!
-    @IBOutlet weak var labelValueGreen: UILabel!
-    @IBOutlet weak var labelValueBlue: UILabel!
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
+    
     //SlidersColor
-    @IBOutlet weak var sliderRed: UISlider! {
-        didSet {
-            sliderRed.maximumValue = 1
-            sliderRed.minimumValue = 0
-            sliderRed.value = 0.50
-        }
-    }
-    @IBOutlet weak var sliderGreen: UISlider!
-    @IBOutlet weak var sliderBlue: UISlider!
+    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak var blueSlider: UISlider!
+    
     //TextFieldColor
-    @IBOutlet weak var redTF: UITextField!
-    @IBOutlet weak var greenTF: UITextField!
-    @IBOutlet weak var blueTF: UITextField!
-    
-    
+    @IBOutlet weak var redTextField: UITextField!
+    @IBOutlet weak var greenTextField: UITextField!
+    @IBOutlet weak var blueTextField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageColor.layer.cornerRadius = 15
         
-        redTF.text = labelValueRed.text
-        greenTF.text = labelValueGreen.text
-        blueTF.text = labelValueBlue.text
-    }
+        colorView.layer.cornerRadius = 15
+        
+        redSlider.tintColor = .red
+        greenSlider.tintColor = .green
+        
+        setColor()
+        setValueForLabel()
+        seValueForTextField()
 
-    @IBAction func sliderRedAction() {
-        labelValueRed.text = String(round(100 * sliderRed.value))
-        redTF.text = labelValueRed.text
+        addDoneButtonTo(redTextField)
+        addDoneButtonTo(greenTextField)
+        addDoneButtonTo(blueTextField)
         
+        
+    
+    }
+    @IBAction func rgbSlider(_ sender: UISlider) {
+    
+        switch sender.tag
     }
     
 }
