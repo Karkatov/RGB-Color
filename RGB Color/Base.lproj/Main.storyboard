@@ -64,7 +64,7 @@
                                             <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="jUD-iH-vnW"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-cr-wx1">
+                                    <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-cr-wx1">
                                         <rect key="frame" x="-2" y="55.333333333333314" width="203" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="199" id="wDJ-yl-MaS"/>
@@ -76,7 +76,7 @@
                                             <action selector="rgbSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="7wF-hS-Gwa"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cp4-Yo-m4m">
+                                    <slider opaque="NO" tag="2" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cp4-Yo-m4m">
                                         <rect key="frame" x="-2" y="110.33333333333331" width="203" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="199" id="0M2-2w-czK"/>

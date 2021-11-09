@@ -37,19 +37,60 @@ class ViewController: UIViewController {
         
         setColor()
         setValueForLabel()
-        seValueForTextField()
+        setValueForTextField()
 
-        addDoneButtonTo(redTextField)
-        addDoneButtonTo(greenTextField)
-        addDoneButtonTo(blueTextField)
+//      addDoneButtonTo(redTextField)
+//        addDoneButtonTo(greenTextField)
+//        addDoneButtonTo(blueTextField)
         
         
     
     }
     @IBAction func rgbSlider(_ sender: UISlider) {
     
-        switch sender.tag
+        switch sender.tag {
+        case 0 :
+            redLabel.text = string(from: sender) // = String(sender.value) или = String(format: "%.2f", sender.value)
+            redTextField.text = string(from: sender)
+        case 1 :
+            greenLabel.text = string(from: sender)
+            greenTextField.text = string(from: sender)
+        case 2:
+            blueLabel.text = string(from: sender)
+            blueTextField.text = string(from: sender)
+        default:
+            break
+        }
+        setColor()
     }
     
+    //цвет view
+    private func setColor() {
+        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                            green: CGFloat(greenSlider.value),
+                                            blue: CGFloat(blueSlider.value),
+                                            alpha: 1)
+    }
+    
+    // Установка значения для label
+    private func setValueForLabel() {
+        redLabel.text = string(from: redSlider)
+        greenLabel.text = string(from: greenSlider)
+        blueLabel.text = string(from: blueSlider)
+    }
+    
+    // Установка значения для TextField
+    private func setValueForTextField() {
+        redTextField.text = string(from: redSlider)
+        greenTextField.text = string(from: greenSlider)
+        blueTextField.text = string(from: blueSlider)
+    }
+   
+    // привидение сендера к стринг до сотых
+    private func string(from sender: UISlider) -> String {
+        return String(format: "%.2f", sender.value)
+      
+    }
 }
+
 
