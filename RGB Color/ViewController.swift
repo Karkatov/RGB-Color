@@ -40,9 +40,9 @@ class ViewController: UIViewController {
         setValueForLabel()
         setValueForTextField()
 
-//        addDoneButtonTo(redTextField)
-//        addDoneButtonTo(greenTextField)
-//        addDoneButtonTo(blueTextField)
+        addDoneButtonTo(redTextField)
+        addDoneButtonTo(greenTextField)
+        addDoneButtonTo(blueTextField)
         
         
     
@@ -93,6 +93,7 @@ class ViewController: UIViewController {
       
     }
 }
+// MARK: - UITextFeildDelegate
 
 // расширение ViewController под протокол UITextFieldDelegate (содержит методы для работы с текстовыми полями)
 extension ViewController: UITextFieldDelegate {
