@@ -43,8 +43,6 @@ class ViewController: UIViewController {
         addDoneButtonTo(redTextField)
         addDoneButtonTo(greenTextField)
         addDoneButtonTo(blueTextField)
-        
-        
     
     }
     @IBAction func rgbSlider(_ sender: UISlider) {
